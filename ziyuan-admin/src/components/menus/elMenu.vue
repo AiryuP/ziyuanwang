@@ -39,7 +39,7 @@
 import {ref,defineProps,computed } from "vue"
 import { useRouter } from 'vue-router'
 interface Props {
-  menu: string;
+  menu: Array<string>;
 }
 const props = defineProps<Props>();
 const menus = props.menu;

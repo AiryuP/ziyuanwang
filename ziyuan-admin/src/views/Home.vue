@@ -10,7 +10,7 @@
           <Menu :menu="menuarr"></Menu>
         </el-aside>
         <el-main class="el_main">
-          
+          <router-view/>
         </el-main>
       </el-container>
     </el-container>
@@ -30,6 +30,11 @@ const menuarr = [
     label: '首页',
     path: '/',
     icon: 'House'
+  },
+  {
+    label: '广告管理',
+    path: '/advert',
+    icon: 'Postcard'
   },
   {
     label: '系统设置',

@@ -10,6 +10,7 @@ import { Permission } from "./user/entities/permission.entity";
 import { RedisModule } from './redis/redis.module';
 import { EmailModule } from './email/email.module';
 import { ConfigModule,ConfigService } from '@nestjs/config';
+import { AdvertModule } from './advert/advert.module';
 
 @Module({
   imports: [
@@ -43,6 +44,7 @@ import { ConfigModule,ConfigService } from '@nestjs/config';
     UserModule,
     RedisModule,
     EmailModule,
+    AdvertModule,
 
   ],
   controllers: [AppController],

@@ -12,7 +12,17 @@ const routes: Array<RouteRecordRaw> = [
         //     isLogin: true,
         // },
         children: [
+          {
+            path: '/advert',
+            name: 'advert',
+            component: ()=> import('@/views/advert/index.vue')
+          }
         ]
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/views/login/login.vue')
     }
     
 ]
