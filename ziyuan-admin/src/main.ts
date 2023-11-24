@@ -7,6 +7,8 @@ import 'element-plus/dist/index.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import '@/assets/css/reset.scss'
 
+// import axios from 'axios'
+
 const app = createApp(App)
 app.use(createPinia())
 app.use(router)

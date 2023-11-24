@@ -20,7 +20,7 @@
           <div class="loginLabel"><span>密</span><span>码</span></div>
           <div class="loginValue">
             <el-input
-              v-model="userName"
+              v-model="password"
               placeholder="请输入用户名"
               :prefix-icon="Search"
             />
@@ -29,7 +29,7 @@
         <div class="loginList">
           <div class="loginLabel"></div>
           <div class="loginValue">
-            <el-button type="primary">登录</el-button>
+            <el-button type="primary" @click="login">登录</el-button>
           </div>
         </div>
         </div>
@@ -40,8 +40,24 @@
 
 <script setup lang="ts">
 import {ref} from "vue"
+import axios from 'axios'
 
 const userName = ref('')
+
+const password = ref('')
+
+const login = ()=>{
+  let api = 'http://localhost:3000/user/login'
+
+  axios.post(api,{
+    username: userName.value,
+    password: password.value
+  })
+  .then(res=>{
+    console.log(res)
+  })
+
+}
 
 
 

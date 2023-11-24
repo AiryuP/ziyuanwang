@@ -4,6 +4,7 @@ import { EmailService } from '../email/email.service';
 import { RedisService } from "../redis/redis.service";
 
 import { RegisterUserDto } from "./dto/register-user.dto";
+import { LoginUserDto } from "./dto/login-user.dto"
 
 @Controller('user')
 export class UserController {
@@ -37,7 +38,12 @@ export class UserController {
   }
 
   @Post('login')
-  async login(@Body()  )
+  async login(@Body() loginUser: LoginUserDto ){
+    console.log(loginUser);
+
+    // return await this.userService.register(registerUser);
+    return loginUser
+  }
 
 
 
